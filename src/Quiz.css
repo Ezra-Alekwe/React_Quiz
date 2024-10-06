@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+.quizContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightblue;
+    border-radius: 15px;
+    width: 500px;
+    height: 400px;
+}
+#questionNo {
+    background-color: lightblue;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    width: 480px; /* Full width of the container */
+}
+.question {
+    text-align: center;
+    margin-top: 20px;
+    width: 470px;
+    height: 85px;
+}
+.options {
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    padding-left: 130px;
+}
+#prev, #next {
+
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: 3px solid lightblue;
+    background-color: #fff;
+    margin: 40px 10px 10px 10px ;
+}
+
+/* Navigate */
+.navigate_container {
+  margin-top: 5%;
+  position: fixed;
+  top: 50px; /* Adjust the top position as needed */
+  right: 10px; /* Fixed 10px from the right edge */
+  width: 270px; /* Fixed width */
+  padding: 10px;
+
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.navigate {
+  display: grid;
+  grid-template-columns: repeat(5, 40px); /* Adjust size to fit the fixed width */
+  gap: 18px;
+  justify-content: center; /* Center the grid within the container */
+}
+
+.navigateQuestion {
+  width: 40px; /* Reduced size */
+  height: 40px; /* Keep it square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 14px; /* Smaller font */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.navigateQuestion:hover {
+  background-color: #f0f0f0;
+}
+
+.activeQuestion {
+  border: 2px solid black; /* Highlight the active question */
+}
+
+.answeredQuestion {
+  background-color: #28a745; /* Green for answered questions */
+  color: white;
+}
+
+.navigateButton {
+  margin-top: 20px;
+  text-align: center; /* Center the submit link */
+}
+
+.navigateButton a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navigateButton a:hover {
+  text-decoration: underline;
+}
+
+.timeRemaining {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  text-align: center; /* Center the time remaining */
+}
+
+.navigateButton button {
+  padding: 8px 10px; /* Smaller padding */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px; /* Smaller font size */
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* Score dialog */
+.scoreDialog{
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background-color: lightblue;
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.scoreDialog button {
+  padding: 8px 10px; /* Smaller padding */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px; /* Smaller font size */
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
