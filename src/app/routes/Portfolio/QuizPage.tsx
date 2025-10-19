@@ -1,7 +1,7 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import QuizModal from "./components/QuizModal";
 import QuizNavigation from "./components/QuizNavigation";
-import { quizData } from '../../../utils/quizData';
+import { quizData } from "../../../utils/quizData";
 import ScoreDialog from "./components/ScoreDialog";
 
 function QuizPage() {
@@ -75,7 +75,7 @@ function QuizPage() {
           </div>
 
           <div className="flex justify-center w-full">
-            <h2 className="text-base">
+            <h2 className="text-sm sm:text-base text-center">
               Test your knowledge and track your progress
             </h2>
           </div>
@@ -83,16 +83,42 @@ function QuizPage() {
       </div>
 
       <div className="grid  lg:grid-cols-[8fr_2fr] gap-4 px-4">
-        <div className="">
-          <QuizModal userAnswers={userAnswers} onAnswer={handleAnswer} currentQuestion={currentQuestion} onNext={handleNext} onPrevious={handlePrevious} nextButtonText={nextButtonText} />
+        <div className="lg:hidden">
+          <QuizNavigation
+            calculateScore={calculateScore}
+            userAnswers={userAnswers}
+            currentQuestion={currentQuestion}
+            onNavigate={navigateToQuestion}
+          />
         </div>
         <div className="">
-          <QuizNavigation calculateScore={calculateScore} userAnswers={userAnswers}  currentQuestion={currentQuestion} onNavigate={navigateToQuestion} />
+          <QuizModal
+            userAnswers={userAnswers}
+            onAnswer={handleAnswer}
+            currentQuestion={currentQuestion}
+            onNext={handleNext}
+            onPrevious={handlePrevious}
+            nextButtonText={nextButtonText}
+          />
+        </div>
+        <div className="hidden lg:block">
+          <QuizNavigation
+            calculateScore={calculateScore}
+            userAnswers={userAnswers}
+            currentQuestion={currentQuestion}
+            onNavigate={navigateToQuestion}
+          />
         </div>
       </div>
 
       <div className="">
-        <ScoreDialog score={score} onReset={resetQuiz} scoreComment={getScoreComment()} openDialog={showScore} setOpenDialog={setShowScore}/>
+        <ScoreDialog
+          score={score}
+          onReset={resetQuiz}
+          scoreComment={getScoreComment()}
+          openDialog={showScore}
+          setOpenDialog={setShowScore}
+        />
       </div>
     </div>
   );

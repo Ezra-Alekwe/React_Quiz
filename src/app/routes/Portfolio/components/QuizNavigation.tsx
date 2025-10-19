@@ -12,12 +12,12 @@ function QuizNavigation(props:IQuizNavigation) {
 
     const {currentQuestion,userAnswers,onNavigate,calculateScore} = props;
   return (
-    <div className="h-64  w-96 rounded-xl shadow-lg border-2 mx-2 px-4 ">
+    <div className="h-fit lg:h-64  lg:w-96 rounded-xl shadow-lg border-2 mx-2 px-4 ">
       <div className="font-semibold text-lg flex h-1/5 items-center px-3">
         <h2>Quiz Navigation</h2>
       </div>
-      <div className="h-3/5 flex items-center justify-center">
-        <div className="grid grid-cols-5 gap-3">
+      <div className="h-3/5 flex items-center justify-center my-5 lg:my-0">
+        <div className="flex flex-wrap justify-center lg:grid lg:grid-cols-5 gap-3">
           {[0,1, 2, 3, 4, 5, 6, 7, 8, 9,].map((index) => {
             const isAnswered = userAnswers[index] !== "q";
             const isCurrent = index === currentQuestion;
@@ -40,7 +40,7 @@ function QuizNavigation(props:IQuizNavigation) {
           })}
         </div>
       </div>
-      <div className="px-2">
+      <div className="px-2 my-2 lg:my-0">
         <button
           type="button"
           onClick={()=>calculateScore()}
