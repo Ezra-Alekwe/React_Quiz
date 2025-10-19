@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/React_Quiz/static/css/main.a210192a.css",
+    "main.js": "/React_Quiz/static/js/main.5af07148.js",
+    "static/media/Geist-ExtraBold.ttf": "/React_Quiz/static/media/Geist-ExtraBold.b725b10e75f296462094.ttf",
+    "static/media/Geist-SemiBold.ttf": "/React_Quiz/static/media/Geist-SemiBold.b58a89b0d09f3c37acaa.ttf",
+    "static/media/Geist-Bold.ttf": "/React_Quiz/static/media/Geist-Bold.81921be5184777b43dd6.ttf",
+    "static/media/Geist-Medium.ttf": "/React_Quiz/static/media/Geist-Medium.fde990e4feb31624649b.ttf",
+    "static/media/Geist-Black.ttf": "/React_Quiz/static/media/Geist-Black.a70f802749cd63af3d9c.ttf",
+    "static/media/Geist-Regular.ttf": "/React_Quiz/static/media/Geist-Regular.65913759ed5a304b67cb.ttf",
+    "index.html": "/React_Quiz/index.html",
+    "main.a210192a.css.map": "/React_Quiz/static/css/main.a210192a.css.map",
+    "main.5af07148.js.map": "/React_Quiz/static/js/main.5af07148.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a210192a.css",
+    "static/js/main.5af07148.js"
+  ]
+}
