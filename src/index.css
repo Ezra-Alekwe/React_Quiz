@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importing Fonts */
+
+/* Geist*/
+@font-face {
+  font-display: swap;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Geist/static/Geist-Regular.ttf") format("truetype");
+}
+/* Geist-500  */
+@font-face {
+  font-display: swap;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/Geist/static/Geist-Medium.ttf") format("truetype");
+}
+/* Geist-600  */
+@font-face {
+  font-display: swap;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/Geist/static/Geist-SemiBold.ttf") format("truetype");
+}
+/* Geist-700  */
+@font-face {
+  font-display: swap;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/Geist/static/Geist-Bold.ttf") format("truetype");
+}
+/* Geist-800  */
+@font-face {
+  font-display: swap;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./assets/fonts/Geist/static/Geist-ExtraBold.ttf") format("truetype");
+}
+/* Geist-900  */
+@font-face {
+  font-display: swap;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/Geist/static/Geist-Black.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --blueLocus: oklch(0.646 0.222 264.376);
+  --Geist: Geist;
+  --smokingGray: oklch(0.556 0 0);
+  --granite: #808080;
+  --cardBg: oklch(0.97 0 0);
+  --progrossBar: oklch(0.205 0 0);
+
+  --background: oklch(0.99 0.005 240);
+  --foreground: oklch(0.15 0.01 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.01 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.01 240);
+  --primary: oklch(0.52 0.13 195);
+  --primary-foreground: oklch(0.99 0.005 195);
+  --secondary: oklch(0.96 0.01 240);
+  --secondary-foreground: oklch(0.15 0.01 240);
+  --muted: oklch(0.96 0.01 240);
+  --muted-foreground: oklch(0.55 0.02 240);
+  --accent: oklch(0.96 0.01 240);
+  --accent-foreground: oklch(0.15 0.01 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.005 27.325);
+  --border: oklch(0.92 0.01 240);
+  --input: oklch(0.92 0.01 240);
+  --ring: oklch(0.52 0.13 195);
+  --chart-1: oklch(0.52 0.13 195);
+  --chart-2: oklch(0.65 0.18 25);
+  --chart-3: oklch(0.45 0.15 280);
+  --chart-4: oklch(0.7 0.15 140);
+  --chart-5: oklch(0.6 0.2 60);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.99 0.005 240);
+  --sidebar-foreground: oklch(0.15 0.01 240);
+  --sidebar-primary: oklch(0.52 0.13 195);
+  --sidebar-primary-foreground: oklch(0.99 0.005 195);
+  --sidebar-accent: oklch(0.96 0.01 240);
+  --sidebar-accent-foreground: oklch(0.15 0.01 240);
+  --sidebar-border: oklch(0.92 0.01 240);
+  --sidebar-ring: oklch(0.52 0.13 195);
+  /* Added coral accent r color */
+  --coral-500: oklch(0.65 0.18 25);
+  --coral-600: oklch(0.58 0.18 25);
+}
+
+
+
+
+/* Style the whole progress bar */
+progress.progress-bar {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0.5rem; /* rounded corners */
+  overflow: hidden;
+  background-color: #e5e7eb; /* Tailwind gray-200 */
+}
+
+/* For Chrome, Safari, Edge */
+progress.progress-bar::-webkit-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 0.5rem;
+}
+
+progress.progress-bar::-webkit-progress-value {
+  background-color: var(--progrossBar); /* Tailwind blue-500 */
+  border-radius: 0.5rem;
+}
+
+/* For Firefox */
+progress.progress-bar::-moz-progress-bar {
+  background-color: #3b82f6;
+  border-radius: 0.5rem;
+}
